@@ -23,7 +23,7 @@ app = Flask(__name__, static_url_path='/static', static_folder='./static')
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 1  # 設置瀏覽器不緩存
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/weight-recorder', methods=['GET', 'POST'])
 def start_here():
     if request.method == 'GET':
         return render_template('index.html')
