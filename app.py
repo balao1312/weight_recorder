@@ -19,7 +19,7 @@ try:
 except (NameError, ImportError, KeyError) as e:
     sys.exit(1)
 
-app = Flask(__name__, static_url_path='./static', static_folder='./static')
+app = Flask(__name__, static_url_path='/weight_recorder/static', static_folder='./static')
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 1  # 設置瀏覽器不緩存
 
 
